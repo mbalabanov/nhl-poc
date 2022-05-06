@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- To do: Do not use CDN but host CSS files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+  <style>
+    .carousel-caption {
+      text-shadow: 0px 0px 2px #000000;
+    }
+  </style>
+
+  <title>NHL Edge</title>
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/images/nhl.svg" alt="NHL" class="img-fluid" height="100"
+          width="50" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Scores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Links
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Standings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Players</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 p-2">
+        <img src="assets/images/nhl-edge.png" alt="NHL Edge" class="img-fluid" />
+      </div>
+      <div class="col-md-9 p-3">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link link-dark active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-dark" href="#">Teams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-dark" href="#">Skaters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-dark" href="#">Goalies</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Other Options
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Option</a></li>
+              <li><a class="dropdown-item" href="#">Another Option</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Different Section</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row border-top">
+      <div class="col-md-12 px-3 pt-1">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Bread</a></li>
+            <li class="breadcrumb-item"><a href="#">Crumb</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Current
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col pt-2 text-center">
+        <div class="alert alert-primary" role="alert">
+          This is a <strong>proof-of-concept</strong> only using flat
+          Bootstrap5 (the chart.js widgets only have placeholders data)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-2">
+      <div class="col-md-8">
+        <div id="video_1"><img src="assets/images/hockey1.jpg" alt="Ice Hockey" class="img-fluid border rounded"></div>
+        <div id="video_2" style="display: none"><img src="assets/images/hockey2.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_3" style="display: none"><img src="assets/images/hockey3.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_4" style="display: none"><img src="assets/images/hockey4.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_5" style="display: none"><img src="assets/images/hockey5.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_6" style="display: none"><img src="assets/images/hockey6.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_7" style="display: none"><img src="assets/images/hockey7.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_8" style="display: none"><img src="assets/images/hockey8.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+        <div id="video_9" style="display: none"><img src="assets/images/hockey9.jpg" alt="Ice Hockey"
+            class="img-fluid border rounded">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="video-links list-group overflow-auto rounded border" style="height: 320px">
+          <a rel="video_1" class="list-group-item list-group-item-action active">
+            <strong>Video 1:</strong> Tityre, tu patulae recubans sub tegmine fagi dolor.</a>
+          <a rel="video_2" class="list-group-item list-group-item-action">
+            <strong>Video 2:</strong> Nihil hic munitissimus habendi senatus locus, nihil horum?</a>
+          <a rel="video_3" class="list-group-item list-group-item-action">
+            <strong>Video 3:</strong> Contra legem facit qui id facit quod lex prohibet.</a>
+          <a rel="video_4" class="list-group-item list-group-item-action">
+            <strong>Video 4:</strong> Petierunt uti sibi concilium totius Galliae in diem certam indicere.</a>
+          <a rel="video_5" class="list-group-item list-group-item-action">
+            <strong>Video 5:</strong> Unam incolunt Belgae, aliam Aquitani, tertiam.</a>
+          <a rel="video_6" class="list-group-item list-group-item-action">
+            <strong>Video 6:</strong> Fictum, deserunt mollit anim laborum astutumque!</a>
+          <a rel="video_7" class="list-group-item list-group-item-action">
+            <strong>Video 7:</strong> Phasellus laoreet lorem vel dolor tempus vehicula.</a>
+          <a rel="video_8" class="list-group-item list-group-item-action">
+            <strong>Video 8:</strong> At nos hinc posthac, sitientis piros Afros.</a>
+          <a rel="video_9" class="list-group-item list-group-item-action">
+            <strong>Video 9:</strong> Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/hockey-news1.jpg" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Iste tusor nos eludet!</h5>
+            <p class="card-text">
+              Quo usque tandem abutere, Catilina, patientia nostra? Paullum
+              deliquit, ponderibus modulisque suis ratio utitur.
+            </p>
+            <a href="#" class="btn btn-outline-secondary">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/hockey-news2.jpg" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Quam diu etiam furor?</h5>
+            <p class="card-text">
+              Salutantibus vitae elit libero, a pharetra augue. Contra legem
+              facit qui id facit quod lex prohibet. Cum sociis natoque
+              penatibus.
+            </p>
+            <a href="#" class="btn btn-outline-secondary">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/hockey-news3.jpg" class="card-img-top" alt="News Image" />
+          <div class="card-body">
+            <h5 class="card-title">Etiam habebis sem euismod.</h5>
+            <p class="card-text">
+              Phasellus laoreet lorem vel dolor tempus vehicula. Ullamco
+              laboris nisi ut aliquid ex ea commodi consequat.
+            </p>
+            <a href="#" class="btn btn-outline-secondary">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row m-4">
+      <div class="col text-center">
+        <button type="button" class="btn btn-outline-secondary btn-lg">
+          More NHL Edge Stories
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3>Top 10 Skaters</h3>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="stats-1-tab" data-bs-toggle="tab" data-bs-target="#stats-1" type="button"
+          role="tab" aria-controls="stats-1" aria-selected="true">
+          <i class="bi bi-activity"></i> Stats 1
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="stats-2-tab" data-bs-toggle="tab" data-bs-target="#stats-2" type="button"
+          role="tab" aria-controls="stats-2" aria-selected="false">
+          <i class="bi bi-bar-chart-line"></i> Stats 2
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="stats-3-tab" data-bs-toggle="tab" data-bs-target="#stats-3" type="button"
+          role="tab" aria-controls="stats-3" aria-selected="false">
+          <i class="bi bi-card-heading"></i> Stats 3
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="stats-4-tab" data-bs-toggle="tab" data-bs-target="#stats-4" type="button"
+          role="tab" aria-controls="stats-4" aria-selected="false">
+          <i class="bi bi-bar-chart-steps"></i> Stats 4
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content bg-white border border-top-0 p-4" id="myTabContent">
+      <div class="tab-pane fade show active" id="stats-1" role="tabpanel" aria-labelledby="stats-1-tab">
+        <div class="row my-3 py-3">
+          <h3 class="text-center">Mercedem aut nummos unde unde extricat, amaras.</h3>
+          <p>Ambitioni dedisse scripsisse iudicaretur. Unam incolunt Belgae, aliam Aquitani, tertiam. Fabio vel iudice
+            vincam, sunt in culpa qui officia. Etiam habebis sem dicantur magna mollis euismod. Quo usque tandem
+            abutere, Catilina, patientia nostra? Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
+            tempor incidunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="row my-2 py-2">
+          <div class="col-lg-3 text-center">
+
+            <!-- Player Stats are displayed when link in player list is selected -->
+            <div id="player-stats1_tyson_barrie" style="display: none">
+              <img src="assets/images/nhl-player6.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Tyson Barrie</h3>
+              <h4><span class="badge bg-secondary">#22</span></h4>
+              <h5>D | 5' 11" | 197 lb | Age: 30 </h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_tyler_benson" style="display: none">
+              <img src="assets/images/nhl-player7.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Tyler Benson</h3>
+              <h4><span class="badge bg-secondary">#16</span></h4>
+              <h5>LW | 6' 0" | 190 lb | Age: 23</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_evan_bouchard" style="display: none">
+              <img src="assets/images/nhl-player8.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Evan Bouchard</h3>
+              <h4><span class="badge bg-secondary">#75</span></h4>
+              <h5>D | 6' 3" | 194 lb | Age: 22</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_cody_ceci" style="display: none">
+              <img src="assets/images/nhl-player9.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Cody Ceci</h3>
+              <h4><span class="badge bg-secondary">#5</span></h4>
+              <h5>D | 6' 2" | 210 lb | Age: 28</h5>
+              <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_leon_draisaitl" style="display: none">
+              <img src="assets/images/nhl-player5.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Leon Draisaitl</h3>
+              <h4><span class="badge bg-secondary">#29</span></h4>
+              <h5>C | 6' 2" | 208 lb | Age: 26</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_warren_foegele" style="display: none">
+              <img src="assets/images/nhl-player10.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Warren Foegele</h3>
+              <h4><span class="badge bg-secondary">#37</span></h4>
+              <h5>LW | 6' 2" | 198 lb | Age: 25</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_zach_hyman" style="display: none">
+              <img src="assets/images/nhl-player11.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Zach Hyman</h3>
+              <h4><span class="badge bg-secondary">#18</span></h4>
+              <h5>LW | 6' 1" | 211 lb | Age: 29</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_evander_kane" style="display: none">
+              <img src="assets/images/nhl-player12.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Evander Kane</h3>
+              <h4><span class="badge bg-secondary">#91</span></h4>
+              <h5>LW | 6' 2" | 210 lb | Age: 30</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_zack_kassian" style="display: none">
+              <img src="assets/images/nhl-player13.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Zack Kassian</h3>
+              <h4><span class="badge bg-secondary">#44</span></h4>
+              <h5>RW | 6' 3" | 211 lb | Age: 31</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_duncan_keith">
+              <img src="assets/images/nhl-player4.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Duncan Keith</h3>
+              <h4><span class="badge bg-secondary">#2</span></h4>
+              <h5>D | 6' 1" | 192 lb | Age: 38</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_mikko_koskinen" style="display: none">
+              <img src="assets/images/nhl-player14.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Mikko Koskinen </h3>
+              <h4><span class="badge bg-secondary">#19</span></h4>
+              <h5>G | 6' 7" | 202 lb | Age: 33</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_kris_russell" style="display: none">
+              <img src="assets/images/nhl-player3.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Kris Russell</h3>
+              <h4><span class="badge bg-secondary">#6</span></h4>
+              <h5>D | 5' 10" | 170 lb | Age: 34</h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_mike_smith" style="display: none">
+              <img src="assets/images/nhl-player2.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Mike Smith</h3>
+              <h4><span class="badge bg-secondary">#41</span></h4>
+              <h5>C | 6' 0" | 184 lb | Age: 28 </h5>
+                  <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+            <div id="player-stats1_ryan_nugent-hopkins" style="display: none">
+              <img src="assets/images/nhl-player1.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" width="150"/>
+              <h3>Ryan Nugent-Hopkins</h3>
+              <h4><span class="badge bg-secondary">#93</span></h4>
+              <h5>C | 6' 0" | 184 lb | Age: 28 </h5>
+              <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <div class="input-group mb-3 my-2">
+              <input id="filter-field-stats1" type="text" class="form-control" placeholder="Filter for Player" aria-label="player">
+              <button id="clear-filter-stats1" class="btn btn-secondary"><i class="bi bi-x"></i></button><span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+            </div>
+            <div id="player-list-stats1" class="player-list-stats1 list-group overflow-auto" style="max-height: 450px;">
+              <a rel="player-stats1_tyson_barrie" class="list-group-item list-group-item-action active">Tyson Barrie</a>
+              <a rel="player-stats1_tyler_benson" class="list-group-item list-group-item-action">Tyler Benson</a>
+              <a rel="player-stats1_evan_bouchard" class="list-group-item list-group-item-action">Evan Bouchard</a>
+              <a rel="player-stats1_cody_ceci" class="list-group-item list-group-item-action">Cody Ceci</a>
+              <a rel="player-stats1_leon_draisaitl" class="list-group-item list-group-item-action">Leon Draisaitl</a>
+              <a rel="player-stats1_warren_foegele" class="list-group-item list-group-item-action">Warren Foegele</a>
+              <a rel="player-stats1_zach_hyman" class="list-group-item list-group-item-action">Zach Hyman</a>
+              <a rel="player-stats1_evander_kane" class="list-group-item list-group-item-action">Evander Kane</a>
+              <a rel="player-stats1_zack_kassian" class="list-group-item list-group-item-action">Zack Kassian</a>
+              <a rel="player-stats1_duncan_keith" class="list-group-item list-group-item-action">Duncan Keith</a>
+              <a rel="player-stats1_mikko_koskinen" class="list-group-item list-group-item-action">Mikko Koskinen</a>
+              <a rel="player-stats1_kris_russell" class="list-group-item list-group-item-action">Kris Russell</a>
+              <a rel="player-stats1_mike_smith" class="list-group-item list-group-item-action">Mike Smith</a>
+              <a rel="player-stats1_ryan_nugent-hopkins" class="list-group-item list-group-item-action">Ryan Nugent-Hopkins</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <p class="text-end"><button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                data-bs-target="#stats1ChartModal"><i class="bi bi-arrows-angle-expand"></i></button></p>
+            <canvas id="stats_1_chart" width="100%"></canvas>
+            <div class="alert alert-warning text-center" role="alert">
+              This is a placeholder chart.js widget
+            </div>
+
+            <!-- Modal for Stats 1 Chart -->
+            <div class="modal fade" id="stats1ChartModal" tabindex="-1" aria-labelledby="stats1ChartModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-activity"></i> Stats 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 px-5">
+                        <div class="input-group mb-3 my-2">
+                          <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                            aria-describedby="basic-addon1" list="playerlist">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 px-5">
+                        <canvas id="stats_1_chart_2" width="100%"></canvas>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="stats-2" role="tabpanel" aria-labelledby="stats-2-tab">
+        <div class="row my-3 py-3">
+          <h3 class="text-center">Gallia est omnis divisa in partes tres, quarum.</h3>
+          <p>Qui ipsorum lingua Celtae, nostra Galli appellantur. Fictum, deserunt mollit anim laborum astutumque! At
+            nos hinc posthac, sitientis piros Afros. Ambitioni dedisse scripsisse iudicaretur. Ullamco laboris nisi ut
+            aliquid ex ea commodi consequat. Magna pars studiorum, prodita quaerimus.</p>
+
+            <div class="alert alert-danger text-center" role="alert">
+              This stats view has not yet been adapted to match the first stats view.
+            </div>
+        </div>
+        <div class="row my-2 py-2">
+          <div class="col-lg-3 text-center">
+            <img src="assets/images/nhl-player2.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" />
+            <h3>Mike Smith</h3>
+            <h4><span class="badge bg-secondary">#41</span></h4>
+            <h4>C | 6' 0" | 184 lb | Age: 28 <h4>
+                <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+          </div>
+          <div class="col-lg-4">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
+              <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+              <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+              <a href="#" class="list-group-item list-group-item-action active">Vestibulum at eros</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi fringilla convallis</a>
+              <a href="#" class="list-group-item list-group-item-action">Ut enim ad minim veniam</a>
+              <a href="#" class="list-group-item list-group-item-action">Excepteur sint obcaecat</a>
+              <a href="#" class="list-group-item list-group-item-action">Tityre, tu patulae recubans</a>
+              <a href="#" class="list-group-item list-group-item-action">Plura mihi bona sunt</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                aria-describedby="basic-addon1" list="playerlist">
+              <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+            </div>
+            <!-- Referenced player list is at the bottom of the page -->
+
+            <p class="text-end"><button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#stats2ChartModal"><i class="bi bi-arrows-angle-expand"></i></button></p>
+            <canvas id="stats_2_chart" width="100%"></canvas>
+            <div class="alert alert-warning text-center" role="alert">
+              This is a placeholder chart: chart.js will <strong>not</strong> be used
+            </div>
+
+            <!-- Modal for Stats 2 Chart -->
+            <div class="modal fade" id="stats2ChartModal" tabindex="-1" aria-labelledby="stats2ChartModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-activity"></i> Stats 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 px-5">
+                        <div class="input-group mb-3 my-2">
+                          <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                            aria-describedby="basic-addon1" list="playerlist">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 px-5">
+                        <canvas id="stats_2_chart_2" width="100%"></canvas>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="stats-3" role="tabpanel" aria-labelledby="stats-3-tab">
+        <div class="row my-3 py-3">
+          <h3 class="text-center">A communi observantia non est recedendum.</h3>
+          <p>Donec sed odio operae, eu vulputate felis rhoncus. Non equidem invideo, miror magis posuere velit aliquet.
+            Quam diu etiam furor iste tuus nos eludet? Ut enim ad minim veniam, quis nostrud exercitation. Quisque
+            placerat facilisis egestas cillum dolore.</p>
+
+            <div class="alert alert-danger text-center" role="alert">
+              This stats view has not yet been adapted to match the first stats view.
+            </div>
+        </div>
+        <div class="row my-2 py-2">
+          <div class="col-lg-3 text-center">
+            <img src="assets/images/nhl-player3.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" />
+            <h3>Kris Russell</h3>
+            <h4><span class="badge bg-secondary">#6</span></h4>
+            <h5>D | 5' 10" | 170 lb | Age: 34<h5>
+                <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+          </div>
+          <div class="col-lg-4">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
+              <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+              <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+              <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi fringilla convallis</a>
+              <a href="#" class="list-group-item list-group-item-action">Ut enim ad minim veniam</a>
+              <a href="#" class="list-group-item list-group-item-action">Excepteur sint obcaecat</a>
+              <a href="#" class="list-group-item list-group-item-action active">Tityre, tu patulae recubans</a>
+              <a href="#" class="list-group-item list-group-item-action">Plura mihi bona sunt</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                aria-describedby="basic-addon1" list="playerlist">
+              <span class="input-group-text" id="basic-addon3"><i class="bi bi-search"></i></span>
+            </div>
+            <!-- Referenced player list is at the bottom of the page -->
+
+            <p class="text-end"><button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#stats3ChartModal"><i class="bi bi-arrows-angle-expand"></i></button></p>
+            <canvas id="stats_3_chart" width="100%"></canvas>
+            <div class="alert alert-warning text-center" role="alert">
+              This is a placeholder chart.js widget
+            </div>
+
+            <!-- Modal for Stats 3 Chart -->
+            <div class="modal fade" id="stats3ChartModal" tabindex="-1" aria-labelledby="stats3ChartModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-activity"></i> Stats 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 px-5">
+                        <div class="input-group mb-3 my-2">
+                          <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                            aria-describedby="basic-addon1" list="playerlist">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 px-5">
+                        <canvas id="stats_3_chart_2" width="100%"></canvas>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="stats-4" role="tabpanel" aria-labelledby="stats-4-tab">
+        <div class="row my-3 py-3">
+          <h3 class="text-center"> Quisque placerat facilisis egestas cillum dolore.</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation. Quisque placerat facilisis egestas cillum dolore.
+            Donec sed odio operae, eu vulputate felis rhoncus. Non equidem invideo, miror magis posuere velit aliquet.
+            Quam diu etiam furor iste tuus nos eludet?</p>
+
+            <div class="alert alert-danger text-center" role="alert">
+              This stats view has not yet been adapted to match the first stats view.
+            </div>
+        </div>
+        <div class="row my-2 py-2">
+          <div class="col-lg-3 text-center">
+            <img src="assets/images/nhl-player4.jpg" class="img-fluid border rounded-circle m-3" alt="Player Image" />
+            <h3>Duncan Keith</h3>
+            <h4><span class="badge bg-secondary">#2</span></h4>
+            <h5>D | 6' 1" | 192 lb | Age: 38<h5>
+                <h5><img src="assets/images/team-logo1.svg" alt="Edmonton Oilers" width="40"> Edmonton Oilers</h5>
+          </div>
+          <div class="col-lg-4">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action">Cras justo odio</a>
+              <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+              <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+              <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+              <a href="#" class="list-group-item list-group-item-action">Morbi fringilla convallis</a>
+              <a href="#" class="list-group-item list-group-item-action active">Ut enim ad minim veniam</a>
+              <a href="#" class="list-group-item list-group-item-action">Excepteur sint obcaecat</a>
+              <a href="#" class="list-group-item list-group-item-action ">Tityre, tu patulae recubans</a>
+              <a href="#" class="list-group-item list-group-item-action">Plura mihi bona sunt</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                aria-describedby="basic-addon1" list="playerlist">
+              <span class="input-group-text" id="basic-addon4"><i class="bi bi-search"></i></span>
+            </div>
+            <!-- Referenced player list is at the bottom of the page -->
+
+            <p class="text-end"><button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#stats4ChartModal"><i class="bi bi-arrows-angle-expand"></i></button></p>
+            <canvas id="stats_4_chart" width="100%"></canvas>
+            <div class="alert alert-warning text-center" role="alert">
+              This is a placeholder chart.js widget
+            </div>
+
+            <!-- Modal for Stats 4 Chart -->
+            <div class="modal fade" id="stats4ChartModal" tabindex="-1" aria-labelledby="stats4ChartModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="bi bi-activity"></i> Stats 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 px-5">
+                        <div class="input-group mb-3 my-2">
+                          <input type="text" class="form-control" placeholder="Search for Player" aria-label="player"
+                            aria-describedby="basic-addon1" list="playerlist">
+                          <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 px-5">
+                        <canvas id="stats_4_chart_2" width="100%"></canvas>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3 pt-3 text-center">
+      <h2>NHL EDGE Partners</h2>
+    </div>
+    <div class="row my-3 pb-5">
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/apple-logo.png" alt="Apple" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/acme-logo.png" alt="Acme" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/rogers-logo.png" alt="Rogers" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/sap-logo.png" alt="SAP" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/aws-logo.png" alt="AWS" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-4 col-md-2 text-center p-2">
+        <div class="bg-white rounded p-4">
+          <img src="assets/images/partner-logos/verizon-logo.png" alt="Verison" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-dark text-light">
+    <section class="pt-2">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto mb-4">
+            <!-- Content -->
+            <p>
+              <img src="assets/images/nhl.svg" alt="NHL" class="img-fluid" width="100" />
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-10 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              National Hockey League
+            </h6>
+            <p>
+              Quam temere in vitiis, legem sancimus haerentia. Mercedem aut
+              nummos unde unde extricat, amaras. Donec sed odio operae, eu
+              vulputate felis rhoncus.
+            </p>
+            <p>
+              Plura mihi bona sunt, inclinet, amari petere vellent. Qui
+              ipsorum lingua Celtae, nostra Galli appellantur. Non equidem
+              invideo, miror magis posuere velit aliquet. Tityre, tu patulae
+              recubans sub tegmine fagi dolor. Prima luce, cum quibus mons
+              aliud consensu ab eo. Gallia est omnis divisa in partes tres,
+              quarum.
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://www.nhl.com/">NHL</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- Player List for Search -->
+  <datalist id="playerlist">
+    <option value="Saniyah Norris"></option>
+    <option value="Aaden Middleton"></option>
+    <option value="Sabrina Arroyo"></option>
+    <option value="Teagan Espinoza"></option>
+    <option value="Shea Vance"></option>
+    <option value="Shane Horne"></option>
+    <option value="Ramon Boone"></option>
+    <option value="Michael Nolan"></option>
+    <option value="Clayton Bryan"></option>
+    <option value="Yadira Ward"></option>
+    <option value="Edgar Reid"></option>
+    <option value="Zoe Bright"></option>
+    <option value="Patrick Winters"></option>
+    <option value="Nolan Booth"></option>
+    <option value="Maddox Stokes"></option>
+    <option value="Milagros Baker"></option>
+    <option value="Aliza Stanton"></option>
+    <option value="Gilberto Murphy"></option>
+    <option value="Kelsie Freeman"></option>
+    <option value="Jonathon Glass"></option>
+    <option value="Macey Osborn"></option>
+    <option value="Aden Mills"></option>
+    <option value="Janiya May"></option>
+    <option value="Ismael Mccarthy"></option>
+    <option value="Charlie Carter"></option>
+    <option value="Jakob Maldonado"></option>
+    <option value="Matteo Bryant"></option>
+    <option value="Marisol Braun"></option>
+    <option value="Mateo Schultz"></option>
+    <option value="Elisha Krueger"></option>
+    <option value="Gunnar Shea"></option>
+    <option value="Asher Jennings"></option>
+    <option value="Aidan Mccall"></option>
+    <option value="Jared Johnson"></option>
+    <option value="Cara Johns"></option>
+    <option value="Alexia Holden"></option>
+    <option value="Denzel Hamilton"></option>
+    <option value="Rory Clay"></option>
+    <option value="Randall Farrell"></option>
+    <option value="Kamren Benitez"></option>
+    <option value="Mckenzie Richardson"></option>
+    <option value="Amirah Hartman"></option>
+    <option value="Kaelyn Bruce"></option>
+    <option value="Shamar Mcpherson"></option>
+    <option value="Heath Perry"></option>
+    <option value="Lance Willis"></option>
+    <option value="Aron Durham"></option>
+    <option value="Jordyn Salas"></option>
+    <option value="Richard Franco"></option>
+    <option value="Sawyer Hanson"></option>
+    <option value="Gillian Brandt"></option>
+    <option value="Ralph Molina"></option>
+    <option value="Shelby Bright"></option>
+    <option value="Cassius Benton"></option>
+    <option value="Beau Pace"></option>
+    <option value="Devin Atkinson"></option>
+    <option value="Kian Rios"></option>
+    <option value="Emely Spencer"></option>
+    <option value="Ricky Blair"></option>
+    <option value="Cheyanne Holmes"></option>
+    <option value="Oliver Ho"></option>
+    <option value="Shaun Shannon"></option>
+    <option value="Davis Barrera"></option>
+    <option value="Giana Wilkerson"></option>
+    <option value="Dale Humphrey"></option>
+    <option value="Oliver Harper"></option>
+    <option value="Ishaan Lewis"></option>
+    <option value="Elliot Randolph"></option>
+    <option value="Frances Floyd"></option>
+    <option value="Hunter Burch"></option>
+    <option value="Fiona Gill"></option>
+    <option value="Benjamin Hammond"></option>
+    <option value="Jalen Proctor"></option>
+    <option value="Juliette Pena"></option>
+    <option value="Gauge Baird"></option>
+    <option value="Jessie Bautista"></option>
+    <option value="Crystal Arnold"></option>
+    <option value="Dawson Baird"></option>
+    <option value="Lilian Whitaker"></option>
+    <option value="London White"></option>
+    <option value="Donald Hester"></option>
+    <option value="Stephen Baldwin"></option>
+    <option value="Anabella Munoz"></option>
+    <option value="Maxim Pacheco"></option>
+    <option value="Jacquelyn Pineda"></option>
+    <option value="Carolyn Andrade"></option>
+    <option value="Marianna Molina"></option>
+    <option value="Armani Dean"></option>
+    <option value="Matthias Ballard"></option>
+    <option value="Shania Robbins"></option>
+    <option value="Zaid Hutchinson"></option>
+    <option value="Tyrone Roy"></option>
+    <option value="Bennett Galvan"></option>
+    <option value="Drake Vaughn"></option>
+    <option value="Weston Mullen"></option>
+    <option value="Hope Hammond"></option>
+    <option value="Amiya Alvarez"></option>
+    <option value="Omar Stout"></option>
+    <option value="Phoenix Carey"></option>
+    <option value="Marvin Vega"></option>
+    <option value="Jocelyn Hunt"></option>
+    <option value="Camden Butler"></option>
+    <option value="Esteban Wall"></option>
+    <option value="Halle Gentry"></option>
+    <option value="Gerardo Shea"></option>
+    <option value="Valerie Lowery"></option>
+    <option value="Victoria Rollins"></option>
+    <option value="Joslyn Krause"></option>
+    <option value="Allen Diaz"></option>
+    <option value="Zion Middleton"></option>
+    <option value="Emmalee Archer"></option>
+    <option value="Isabell Rice"></option>
+    <option value="Malcolm Thompson"></option>
+    <option value="Melanie Mckay"></option>
+    <option value="Royce Mckee"></option>
+    <option value="Ezekiel Maynard"></option>
+    <option value="Mohammed Porter"></option>
+    <option value="Blaze Rogers"></option>
+    <option value="Paisley Farrell"></option>
+    <option value="Lucille Larsen"></option>
+    <option value="Xander Oconnell"></option>
+    <option value="Ramon Poole"></option>
+    <option value="Kaylin Tanner"></option>
+    <option value="Brenna Sparks"></option>
+    <option value="Reese Garcia"></option>
+    <option value="Ramon Olsen"></option>
+    <option value="Sara Lane"></option>
+    <option value="Celia Bird"></option>
+    <option value="Karson Cobb"></option>
+    <option value="Amare Palmer"></option>
+    <option value="Selena Macias"></option>
+    <option value="Cooper Bender"></option>
+    <option value="Gianni Barr"></option>
+    <option value="Walker Shea"></option>
+    <option value="Cheyanne Macias"></option>
+    <option value="Anastasia Ho"></option>
+    <option value="Manuel Collins"></option>
+    <option value="Houston Hogan"></option>
+    <option value="Eden Ross"></option>
+    <option value="Robert Atkins"></option>
+    <option value="Steven Goodwin"></option>
+    <option value="Damon Burton"></option>
+    <option value="Reid Valenzuela"></option>
+    <option value="Juan Hill"></option>
+    <option value="Ahmad Carter"></option>
+    <option value="Lexie Lynn"></option>
+    <option value="Ashlynn Burns"></option>
+    <option value="Nathaniel Wright"></option>
+    <option value="Landon Tate"></option>
+    <option value="Deja Villa"></option>
+    <option value="Darian Chambers"></option>
+    <option value="Denisse Waters"></option>
+    <option value="Kaeden Mcconnell"></option>
+    <option value="Kenyon Andersen"></option>
+    <option value="Helena Franco"></option>
+    <option value="Laila Lozano"></option>
+    <option value="Christopher Robles"></option>
+    <option value="Enrique Conley"></option>
+    <option value="Rocco Bradshaw"></option>
+    <option value="Jerome Maxwell"></option>
+    <option value="Shayna Park"></option>
+    <option value="Kellen Faulkner"></option>
+    <option value="Nyasia Jarvis"></option>
+    <option value="Reynaldo Walker"></option>
+    <option value="Lia Liu"></option>
+    <option value="Haiden Vaughn"></option>
+    <option value="Amber Zamora"></option>
+    <option value="Dalton Boyle"></option>
+    <option value="Rosemary Levy"></option>
+    <option value="Natalee Wiggins"></option>
+    <option value="Payton Hurst"></option>
+    <option value="Darien Knight"></option>
+    <option value="Kenneth Foley"></option>
+    <option value="Roy Webb"></option>
+    <option value="Emilie Mcdaniel"></option>
+    <option value="Joaquin Richmond"></option>
+    <option value="Yadiel Ferrell"></option>
+    <option value="Aylin Avery"></option>
+    <option value="Kyleigh Moss"></option>
+    <option value="Chandler Hawkins"></option>
+    <option value="Camilla Macdonald"></option>
+    <option value="Zechariah Booker"></option>
+    <option value="Baron Conway"></option>
+    <option value="Morgan Kidd"></option>
+    <option value="Kiara Figueroa"></option>
+    <option value="Gilbert Palmer"></option>
+    <option value="Jillian Bird"></option>
+    <option value="Kimora Berry"></option>
+    <option value="Kira Pugh"></option>
+    <option value="Kyla Fletcher"></option>
+    <option value="Brianna Fisher"></option>
+    <option value="Talia Tran"></option>
+    <option value="Diana Elliott"></option>
+    <option value="Jonathan Matthews"></option>
+    <option value="Aiyana Huang"></option>
+    <option value="Sophia Rogers"></option>
+    <option value="Xiomara Hobbs"></option>
+    <option value="Ali Fowler"></option>
+    <option value="Walter Oneal"></option>
+    <option value="Joel Johnston"></option>
+    <option value="Adolfo Serrano"></option>
+    <option value="Tyshawn Lynn"></option>
+    <option value="Kolten Haley"></option>
+    <option value="Tyree Steele"></option>
+    <option value="Zaid Gomez"></option>
+    <option value="Myla Campos"></option>
+    <option value="Braedon Rios"></option>
+    <option value="Jameson Campos"></option>
+    <option value="Kobe Hall"></option>
+    <option value="Jazmyn Knox"></option>
+    <option value="Selina Mcmahon"></option>
+    <option value="Talon Humphrey"></option>
+    <option value="Jamal Decker"></option>
+    <option value="Jon Reeves"></option>
+    <option value="Lizeth Rollins"></option>
+    <option value="Yosef Novak"></option>
+    <option value="Keegan Terrell"></option>
+    <option value="Marvin Hebert"></option>
+    <option value="Maxim Floyd"></option>
+    <option value="Marlee Vincent"></option>
+    <option value="Ann Bray"></option>
+    <option value="Eden Brennan"></option>
+    <option value="Duncan Decker"></option>
+    <option value="Jarrett Anderson"></option>
+    <option value="Kaiden Herrera"></option>
+    <option value="Matthew Copeland"></option>
+    <option value="Carolina Jimenez"></option>
+    <option value="Jaydon Mclean"></option>
+    <option value="Ramiro Carr"></option>
+    <option value="Baron Harding"></option>
+    <option value="Kamora Todd"></option>
+    <option value="Immanuel Spence"></option>
+    <option value="Arabella Kelly"></option>
+    <option value="Donald Nunez"></option>
+    <option value="Aspen Ford"></option>
+    <option value="Ben Atkins"></option>
+    <option value="Izaiah Krause"></option>
+    <option value="Briana Myers"></option>
+    <option value="Nathan Wise"></option>
+    <option value="Judith Sheppard"></option>
+    <option value="Willie Ayers"></option>
+    <option value="Paola Miranda"></option>
+    <option value="Tatum Delgado"></option>
+    <option value="Elizabeth Diaz"></option>
+    <option value="Helen Oliver"></option>
+    <option value="Catalina Schneider"></option>
+    <option value="Quentin Suarez"></option>
+    <option value="Madalyn Bryant"></option>
+    <option value="Demarcus Cox"></option>
+    <option value="Selena Brennan"></option>
+    <option value="Jakob Burgess"></option>
+    <option value="Samara Nolan"></option>
+    <option value="Franklin Orozco"></option>
+    <option value="Henry Singh"></option>
+    <option value="Jessie Cantu"></option>
+    <option value="Aydan Lang"></option>
+    <option value="Lindsay Mccann"></option>
+    <option value="Josue Salinas"></option>
+    <option value="Cayden Henry"></option>
+    <option value="Sergio Cantrell"></option>
+    <option value="Kathleen Mosley"></option>
+    <option value="Juliette Griffith"></option>
+    <option value="Julissa Haynes"></option>
+    <option value="Tatum Cordova"></option>
+    <option value="Landon Mullen"></option>
+    <option value="Zachary Tran"></option>
+    <option value="Bryson Mcknight"></option>
+    <option value="Justine Ferguson"></option>
+    <option value="Trystan Robles"></option>
+    <option value="Paisley Mcgee"></option>
+    <option value="Cesar White"></option>
+    <option value="Nina Hansen"></option>
+    <option value="Jarrett Golden"></option>
+    <option value="Zariah Odom"></option>
+    <option value="Ethen Benjamin"></option>
+    <option value="Rudy Benton"></option>
+    <option value="Sidney Spence"></option>
+    <option value="Dakota Wagner"></option>
+    <option value="Hadassah Sheppard"></option>
+    <option value="Jordin Garner"></option>
+    <option value="Jasiah Huang"></option>
+    <option value="Jarrett Sellers"></option>
+    <option value="Dahlia Combs"></option>
+    <option value="Chaz Lloyd"></option>
+    <option value="Aliya Swanson"></option>
+    <option value="Karsyn Herrera"></option>
+    <option value="Kellen Elliott"></option>
+    <option value="Emma Howe"></option>
+    <option value="Isabelle Richards"></option>
+    <option value="Eden Blackburn"></option>
+    <option value="Dillon Swanson"></option>
+    <option value="Reuben Foster"></option>
+    <option value="Sharon Petersen"></option>
+    <option value="Elise Kidd"></option>
+    <option value="Brenton Reeves"></option>
+    <option value="Maddison Conrad"></option>
+    <option value="Felipe Roy"></option>
+    <option value="Anderson Bradford"></option>
+    <option value="Deven Mullen"></option>
+    <option value="Jameson Fox"></option>
+    <option value="Misael Carson"></option>
+    <option value="Cassandra Cardenas"></option>
+    <option value="Willie Mullen"></option>
+    <option value="Gaven Cook"></option>
+    <option value="Alaina Payne"></option>
+    <option value="Joselyn Austin"></option>
+    <option value="Kevin Holloway"></option>
+    <option value="Averie Castro"></option>
+    <option value="Cheyanne Carter"></option>
+    <option value="Naomi Vasquez"></option>
+    <option value="Dahlia Gibson"></option>
+    <option value="Veronica Franklin"></option>
+    <option value="Walker Clay"></option>
+    <option value="Riya Saunders"></option>
+    <option value="Denise Fitzpatrick"></option>
+    <option value="Rosemary Dixon"></option>
+    <option value="Maleah Hernandez"></option>
+    <option value="Remington Booth"></option>
+    <option value="Cindy Foster"></option>
+    <option value="Bennett Torres"></option>
+    <option value="Evelin Paul"></option>
+    <option value="Sylvia Berg"></option>
+    <option value="Vance Sloan"></option>
+    <option value="Hamza Prince"></option>
+    <option value="Roy Hickman"></option>
+    <option value="Niko Franco"></option>
+    <option value="Aubrie Orozco"></option>
+    <option value="Jeramiah Jimenez"></option>
+    <option value="Dakota Hampton"></option>
+    <option value="Evangeline Peterson"></option>
+    <option value="Oswaldo Klein"></option>
+    <option value="Hailie Sawyer"></option>
+    <option value="Isabelle Leach"></option>
+    <option value="Alexis Calhoun"></option>
+    <option value="Perla Blanchard"></option>
+    <option value="Allison Mccall"></option>
+    <option value="Kadin Stevens"></option>
+    <option value="Cassandra Pacheco"></option>
+    <option value="Avery Pineda"></option>
+    <option value="Charles Mcconnell"></option>
+    <option value="Gia Atkinson"></option>
+    <option value="Steven Ford"></option>
+    <option value="Ciara Wong"></option>
+    <option value="Reece Bennett"></option>
+    <option value="Sterling Fletcher"></option>
+    <option value="Andreas Rhodes"></option>
+    <option value="Kassidy Stephenson"></option>
+    <option value="Tiffany Sampson"></option>
+    <option value="Demetrius Villa"></option>
+    <option value="Julien Barker"></option>
+    <option value="Charity Ho"></option>
+    <option value="Gwendolyn Meadows"></option>
+    <option value="Teagan Villarreal"></option>
+    <option value="Angel Melton"></option>
+    <option value="Hallie Todd"></option>
+    <option value="Neil Weiss"></option>
+    <option value="Jesse Gates"></option>
+    <option value="Rudy Paul"></option>
+    <option value="Drew Paul"></option>
+    <option value="Blaze Blankenship"></option>
+    <option value="Jolie Banks"></option>
+    <option value="Rudy Small"></option>
+    <option value="Rayna Wilkerson"></option>
+    <option value="Angel Decker"></option>
+    <option value="Richard Bates"></option>
+    <option value="Lillie Robles"></option>
+    <option value="Jamari Kelley"></option>
+    <option value="Duncan Watson"></option>
+    <option value="Deborah Wu"></option>
+    <option value="Ezra Chaney"></option>
+    <option value="Julian Sanchez"></option>
+    <option value="Luz Copeland"></option>
+    <option value="Maximillian Collins"></option>
+    <option value="Beckham Gould"></option>
+    <option value="Lyric Lyons"></option>
+    <option value="John Johnston"></option>
+    <option value="Cierra Leon"></option>
+    <option value="Elise Cook"></option>
+    <option value="Jacquelyn Stevens"></option>
+    <option value="Angela Sanford"></option>
+    <option value="Jovani Velazquez"></option>
+    <option value="Brody Chavez"></option>
+    <option value="Lindsay Rice"></option>
+    <option value="Dana Lara"></option>
+    <option value="Paxton Salas"></option>
+    <option value="Harper Hoffman"></option>
+    <option value="Quinton Rubio"></option>
+    <option value="Karley Tanner"></option>
+    <option value="Pranav Gomez"></option>
+    <option value="Reynaldo Romero"></option>
+    <option value="Trinity Taylor"></option>
+    <option value="Katelynn Russell"></option>
+    <option value="Natalia Washington"></option>
+    <option value="Clarence Hines"></option>
+    <option value="Julianne Barker"></option>
+    <option value="Melvin Weaver"></option>
+    <option value="Irene Zuniga"></option>
+    <option value="Julius Hampton"></option>
+    <option value="Ireland Pacheco"></option>
+    <option value="Elle Roberts"></option>
+    <option value="Chana Fox"></option>
+    <option value="Greyson Franklin"></option>
+    <option value="Lana Ramirez"></option>
+    <option value="Giovani Bullock"></option>
+    <option value="Trevin Nolan"></option>
+    <option value="Gordon Tapia"></option>
+    <option value="Kathy Rosario"></option>
+    <option value="Stanley Sims"></option>
+    <option value="Leland Bruce"></option>
+    <option value="Harmony Gilmore"></option>
+    <option value="Axel Short"></option>
+    <option value="Beckett Holder"></option>
+    <option value="Steven Cannon"></option>
+    <option value="Jonathon Neal"></option>
+    <option value="Fiona Mercer"></option>
+    <option value="Shane Keith"></option>
+    <option value="Kassandra Adams"></option>
+    <option value="Emanuel Pearson"></option>
+    <option value="Isabel Ross"></option>
+    <option value="Janet Curtis"></option>
+    <option value="Erika Serrano"></option>
+    <option value="Haven Kennedy"></option>
+    <option value="Ryann Solomon"></option>
+    <option value="Odin Sexton"></option>
+    <option value="Amber Preston"></option>
+    <option value="Avah Santiago"></option>
+    <option value="Darryl Hunter"></option>
+    <option value="Yusuf Gay"></option>
+    <option value="Will Ballard"></option>
+    <option value="Paola Solis"></option>
+    <option value="Saige Glass"></option>
+    <option value="Maximillian Andrade"></option>
+    <option value="Katherine Cantrell"></option>
+    <option value="Robert Mckee"></option>
+    <option value="Anton Cooke"></option>
+    <option value="Jayden Foley"></option>
+    <option value="Maddison Espinoza"></option>
+    <option value="Tanner Vincent"></option>
+    <option value="Deanna Greer"></option>
+    <option value="Myah Cline"></option>
+    <option value="Eddie Pugh"></option>
+    <option value="Andre Carney"></option>
+    <option value="Dax Werner"></option>
+    <option value="Ronin Montes"></option>
+    <option value="Brenda Mann"></option>
+    <option value="Tatiana Brennan"></option>
+    <option value="Ian Edwards"></option>
+    <option value="Finley Perry"></option>
+    <option value="Jorge Reid"></option>
+    <option value="Melany Gaines"></option>
+    <option value="Tyson Summers"></option>
+    <option value="Kendall Navarro"></option>
+    <option value="Kaya Mcintosh"></option>
+    <option value="Gracelyn Allen"></option>
+    <option value="Colt Luna"></option>
+    <option value="Frankie Byrd"></option>
+    <option value="Sydnee Todd"></option>
+    <option value="Emmanuel Mahoney"></option>
+    <option value="Zoie Vasquez"></option>
+    <option value="Tori Guzman"></option>
+    <option value="Deegan Blanchard"></option>
+    <option value="Catalina Waller"></option>
+    <option value="Dayami Hunter"></option>
+    <option value="Seamus Blair"></option>
+    <option value="Savannah Fox"></option>
+    <option value="Maren Velez"></option>
+    <option value="Frances Murphy"></option>
+    <option value="Kamora Fitzpatrick"></option>
+    <option value="Kimora Montoya"></option>
+    <option value="Chase Krueger"></option>
+    <option value="Scott Richard"></option>
+    <option value="Cory Pope"></option>
+    <option value="Nathan Barron"></option>
+    <option value="Miriam Holt"></option>
+    <option value="Lillian Bowers"></option>
+    <option value="Amari Levine"></option>
+    <option value="Delilah Clayton"></option>
+    <option value="Garrett Mcconnell"></option>
+    <option value="Zaid Grant"></option>
+    <option value="Nathan Mueller"></option>
+    <option value="Brooks Pittman"></option>
+    <option value="Barbara Benjamin"></option>
+    <option value="Peyton Avery"></option>
+    <option value="Jazlyn Sanders"></option>
+    <option value="Kaila Norton"></option>
+    <option value="Dalton Vincent"></option>
+    <option value="Jadyn Wade"></option>
+    <option value="Julien Garner"></option>
+    <option value="Kieran Peterson"></option>
+    <option value="Amari Thompson"></option>
+    <option value="Cash Cochran"></option>
+    <option value="Marely Franklin"></option>
+    <option value="Jonas Warren"></option>
+    <option value="Sebastian Meza"></option>
+    <option value="Ahmed Lucas"></option>
+    <option value="Bradyn Black"></option>
+    <option value="Anthony Murphy"></option>
+    <option value="Joseph Cooper"></option>
+    <option value="Lila Oneill"></option>
+    <option value="Avah Lang"></option>
+    <option value="Carmelo Terrell"></option>
+    <option value="Daphne Bridges"></option>
+    <option value="Zachariah Hatfield"></option>
+    <option value="Bethany Holmes"></option>
+    <option value="Jonathon Bray"></option>
+    <option value="Miguel Doyle"></option>
+    <option value="Myles Navarro"></option>
+    <option value="Shane Huff"></option>
+    <option value="Emely Montes"></option>
+    <option value="Jasper Klein"></option>
+    <option value="Desmond Fleming"></option>
+    <option value="Alexis Young"></option>
+    <option value="Stanley Benton"></option>
+    <option value="Sage Warren"></option>
+    <option value="Tobias Fry"></option>
+    <option value="Marilyn Kent"></option>
+    <option value="Anya Beasley"></option>
+    <option value="Aniyah Hart"></option>
+    <option value="Amina Macias"></option>
+    <option value="Eva Ball"></option>
+    <option value="Chanel Mccullough"></option>
+    <option value="Quinn Mcpherson"></option>
+    <option value="Keith Wise"></option>
+    <option value="Layton Cisneros"></option>
+    <option value="Dashawn Daniels"></option>
+    <option value="Ralph Woods"></option>
+    <option value="Sonny Barber"></option>
+    <option value="Josie Campbell"></option>
+    <option value="Elaina Mata"></option>
+    <option value="Kristopher Mccarthy"></option>
+    <option value="Luka Cole"></option>
+    <option value="Ansley Norman"></option>
+    <option value="Demetrius Dyer"></option>
+    <option value="Blake Riddle"></option>
+    <option value="Dania Dudley"></option>
+    <option value="Antoine Wolf"></option>
+    <option value="Ellis Rich"></option>
+    <option value="Israel Mcconnell"></option>
+    <option value="Josue Bird"></option>
+    <option value="Bruno Mcbride"></option>
+    <option value="Zane Olson"></option>
+    <option value="Miriam Levine"></option>
+    <option value="Kevin Bowman"></option>
+    <option value="Taylor Clarke"></option>
+    <option value="Destinee Duffy"></option>
+    <option value="Tucker Martin"></option>
+    <option value="Elisa Hubbard"></option>
+    <option value="Yael Travis"></option>
+    <option value="Mason Berry"></option>
+    <option value="Willow Barajas"></option>
+    <option value="Elsie Bentley"></option>
+    <option value="Jazmin Nolan"></option>
+    <option value="Blaze Combs"></option>
+    <option value="Harley Dyer"></option>
+    <option value="Izayah Moon"></option>
+    <option value="Jolie Leblanc"></option>
+    <option value="Abril Shaffer"></option>
+    <option value="Simon Pitts"></option>
+    <option value="Rachel Guzman"></option>
+    <option value="Joseph Knox"></option>
+    <option value="Ashlee Ramos"></option>
+    <option value="Noemi Lane"></option>
+    <option value="Gerald Lang"></option>
+    <option value="Ashanti Martinez"></option>
+    <option value="Kyan Rubio"></option>
+    <option value="Emiliano Waters"></option>
+    <option value="Amari Chase"></option>
+    <option value="Gabriela Chase"></option>
+    <option value="Andrew Haas"></option>
+    <option value="Aniyah Henry"></option>
+    <option value="Ulises Nelson"></option>
+    <option value="Kaden Watkins"></option>
+    <option value="Zechariah Heath"></option>
+    <option value="Danika Hawkins"></option>
+    <option value="Adelaide Arroyo"></option>
+    <option value="Theodore Cooley"></option>
+    <option value="Duncan Stevens"></option>
+    <option value="Trevon Haney"></option>
+    <option value="Brooke Lawrence"></option>
+    <option value="Johan Leon"></option>
+    <option value="Kaia Fischer"></option>
+    <option value="Leticia Pennington"></option>
+    <option value="Iyana Bray"></option>
+    <option value="Molly Camacho"></option>
+    <option value="Alina Mckenzie"></option>
+    <option value="Drake Arias"></option>
+    <option value="Hope Irwin"></option>
+    <option value="Irene Barr"></option>
+    <option value="Kristin Pacheco"></option>
+    <option value="Luka Hubbard"></option>
+    <option value="Julianne Norton"></option>
+    <option value="Morgan Burnett"></option>
+    <option value="Rayne Stafford"></option>
+    <option value="Savanna Cabrera"></option>
+    <option value="Sidney Mora"></option>
+    <option value="Jovanny Bonilla"></option>
+    <option value="Seth Wall"></option>
+    <option value="Danika Goodman"></option>
+    <option value="Freddy Dickson"></option>
+    <option value="Kaylah Wise"></option>
+    <option value="Karli Evans"></option>
+    <option value="Braxton Petty"></option>
+    <option value="Jazmyn Soto"></option>
+    <option value="Shea Baxter"></option>
+    <option value="Chaim Lee"></option>
+    <option value="Natalya Haley"></option>
+    <option value="Darien Craig"></option>
+    <option value="Sheldon Randolph"></option>
+    <option value="Ellie Silva"></option>
+    <option value="Lucas Wade"></option>
+    <option value="Daniel Mccullough"></option>
+    <option value="Sasha King"></option>
+    <option value="Matias Potts"></option>
+    <option value="Ernest Goodman"></option>
+    <option value="Javion Carney"></option>
+    <option value="Nehemiah Mccall"></option>
+    <option value="Kailyn Nielsen"></option>
+    <option value="Kylan Sharp"></option>
+    <option value="Adam Hess"></option>
+    <option value="Ayla Zavala"></option>
+    <option value="Teagan Calhoun"></option>
+    <option value="Jayleen Burnett"></option>
+    <option value="Pierce Shepard"></option>
+    <option value="Mariah Gill"></option>
+    <option value="Ruth Alvarado"></option>
+    <option value="Sergio Sexton"></option>
+    <option value="Shawn Ferrell"></option>
+    <option value="Alyson Harvey"></option>
+    <option value="Marco Shelton"></option>
+    <option value="Atticus Cole"></option>
+    <option value="Titus Kim"></option>
+    <option value="Shyla Nicholson"></option>
+    <option value="Kenyon Brady"></option>
+    <option value="Steve Morris"></option>
+    <option value="Saul Cohen"></option>
+    <option value="Adrianna Shaw"></option>
+    <option value="Xavier Rodriguez"></option>
+    <option value="Shyla Parks"></option>
+    <option value="Donte Cantu"></option>
+    <option value="Nola Deleon"></option>
+    <option value="Aleah Tapia"></option>
+    <option value="Camille Rodriguez"></option>
+    <option value="Matthias Archer"></option>
+    <option value="Bradyn Parsons"></option>
+    <option value="Dakota Holland"></option>
+    <option value="Sariah Figueroa"></option>
+    <option value="Mareli Salas"></option>
+    <option value="Abril Best"></option>
+    <option value="Andrea Avery"></option>
+    <option value="Emilia Page"></option>
+    <option value="Bailey Sullivan"></option>
+    <option value="Spencer Carpenter"></option>
+    <option value="Jaron Cannon"></option>
+    <option value="Miguel Fox"></option>
+    <option value="Catalina Dunn"></option>
+    <option value="Talon Maddox"></option>
+    <option value="Garrett Aguilar"></option>
+    <option value="Samson Cain"></option>
+    <option value="Finley Atkinson"></option>
+    <option value="Omari Costa"></option>
+    <option value="Selah Mclean"></option>
+    <option value="Will Roy"></option>
+    <option value="Prince Dawson"></option>
+    <option value="Bria Bowen"></option>
+    <option value="Omar Ali"></option>
+    <option value="Halle Scott"></option>
+    <option value="London Woods"></option>
+    <option value="Bradyn Nielsen"></option>
+    <option value="Ayla Hobbs"></option>
+    <option value="Alfredo Pearson"></option>
+    <option value="Genesis Bowers"></option>
+    <option value="Ruben Estes"></option>
+    <option value="Marie Byrd"></option>
+    <option value="Jonathan Little"></option>
+    <option value="Jimmy Mccormick"></option>
+    <option value="Elianna Steele"></option>
+    <option value="Elisabeth Spence"></option>
+    <option value="London Duncan"></option>
+    <option value="Kristian Obrien"></option>
+    <option value="Cedric Cannon"></option>
+    <option value="Antwan Hebert"></option>
+    <option value="Teagan Stark"></option>
+    <option value="Slade Mckee"></option>
+    <option value="Kristopher Farrell"></option>
+    <option value="Chelsea Hill"></option>
+    <option value="Moises Gay"></option>
+    <option value="Branden Cordova"></option>
+    <option value="Anthony Whitehead"></option>
+    <option value="Immanuel Bray"></option>
+    <option value="Serena Russell"></option>
+    <option value="Siena Wade"></option>
+    <option value="Kailey Romero"></option>
+    <option value="Leyla Rojas"></option>
+    <option value="Kael Bridges"></option>
+    <option value="Ronnie Proctor"></option>
+    <option value="Keely Prince"></option>
+    <option value="Marley Stevens"></option>
+    <option value="Jeramiah Lam"></option>
+    <option value="Tara Sullivan"></option>
+    <option value="Simon Villa"></option>
+    <option value="Jovany Wall"></option>
+    <option value="Elaine Quinn"></option>
+    <option value="Christine Chavez"></option>
+    <option value="Ricardo Pace"></option>
+    <option value="Ryan Villarreal"></option>
+    <option value="Josie Rose"></option>
+    <option value="Zaiden Conner"></option>
+    <option value="Haleigh Meyer"></option>
+    <option value="Lilly Thomas"></option>
+    <option value="Ashtyn Hammond"></option>
+    <option value="Elle Barber"></option>
+    <option value="Ronnie Fuentes"></option>
+    <option value="Jaliyah Johnson"></option>
+    <option value="River Flores"></option>
+    <option value="Jaime Lutz"></option>
+    <option value="Bailey Mccann"></option>
+    <option value="Josue Barrera"></option>
+    <option value="Lina Wright"></option>
+    <option value="Haylie Haley"></option>
+    <option value="Gabriela Bond"></option>
+    <option value="Easton Cole"></option>
+    <option value="Claire Reid"></option>
+    <option value="Alexzander Hammond"></option>
+    <option value="Felipe Nichols"></option>
+    <option value="Clara Sharp"></option>
+    <option value="Alondra Hanson"></option>
+    <option value="Yair Mejia"></option>
+    <option value="Adolfo Mcguire"></option>
+    <option value="Abby Bartlett"></option>
+    <option value="Cameron Blair"></option>
+    <option value="Elliott Cantrell"></option>
+    <option value="Jenna Cohen"></option>
+    <option value="Lawson Wu"></option>
+    <option value="Sidney Terry"></option>
+    <option value="Saniyah Sparks"></option>
+    <option value="Ivy Rice"></option>
+    <option value="Madelyn Franklin"></option>
+    <option value="Braiden Nguyen"></option>
+    <option value="Matias Garcia"></option>
+    <option value="Haylie Lane"></option>
+    <option value="Cole Bird"></option>
+    <option value="Alivia Kerr"></option>
+    <option value="Maddox Mills"></option>
+    <option value="Deven Decker"></option>
+    <option value="Mary Wilson"></option>
+    <option value="Augustus Lucas"></option>
+    <option value="Amir Norman"></option>
+    <option value="Matthias Randall"></option>
+    <option value="Lawrence Bond"></option>
+    <option value="Maritza Bonilla"></option>
+    <option value="Aracely Phillips"></option>
+    <option value="Tessa Mcintyre"></option>
+    <option value="Zackary Rosario"></option>
+    <option value="Pierre Weaver"></option>
+    <option value="Jagger Melton"></option>
+    <option value="Courtney Leblanc"></option>
+    <option value="Madelynn Ortiz"></option>
+    <option value="Ismael Richardson"></option>
+    <option value="Payton Salazar"></option>
+    <option value="Valerie Waller"></option>
+    <option value="Linda Cobb"></option>
+    <option value="Tiffany Lin"></option>
+    <option value="Uriah Mora"></option>
+    <option value="Karley Patrick"></option>
+    <option value="Cesar Adkins"></option>
+    <option value="Lisa Wiley"></option>
+    <option value="Ian Diaz"></option>
+    <option value="Paula Carpenter"></option>
+    <option value="Cason Fields"></option>
+    <option value="Valentina Mcmillan"></option>
+    <option value="Dillan Mclean"></option>
+    <option value="Dominic Hawkins"></option>
+    <option value="Reina Pratt"></option>
+    <option value="Patrick Pierce"></option>
+    <option value="Kelsie Taylor"></option>
+    <option value="Chaz Pacheco"></option>
+    <option value="Juan Sanchez"></option>
+    <option value="Jaiden Sanchez"></option>
+    <option value="Angeline Conley"></option>
+    <option value="Davion Jarvis"></option>
+    <option value="Emerson Williamson"></option>
+    <option value="Brendan Guerrero"></option>
+    <option value="Scott Taylor"></option>
+    <option value="Guillermo Hicks"></option>
+    <option value="Bethany Potts"></option>
+    <option value="Bria Dodson"></option>
+    <option value="Kamryn Martinez"></option>
+    <option value="Carolyn Parker"></option>
+    <option value="Alissa Castillo"></option>
+    <option value="Randall Dunn"></option>
+    <option value="Taryn Cervantes"></option>
+    <option value="Darwin Fitzgerald"></option>
+    <option value="Kathy Lucas"></option>
+    <option value="Ulises Decker"></option>
+    <option value="Mathew Klein"></option>
+    <option value="Charlie House"></option>
+    <option value="Lilyana Juarez"></option>
+    <option value="Ayanna Owen"></option>
+    <option value="Matteo Conley"></option>
+    <option value="Shane Cuevas"></option>
+    <option value="Anabella Castro"></option>
+    <option value="Beckett Reid"></option>
+    <option value="Kadence Daniels"></option>
+    <option value="Eric Archer"></option>
+    <option value="Haylee Diaz"></option>
+    <option value="Sanai Davenport"></option>
+    <option value="Clarissa Reyes"></option>
+    <option value="Stephany Herrera"></option>
+    <option value="Ariana Kline"></option>
+    <option value="Elsa Mcneil"></option>
+    <option value="Jaidyn Bryan"></option>
+    <option value="Yaretzi Dorsey"></option>
+    <option value="Kelsey Bernard"></option>
+    <option value="Korbin Foley"></option>
+    <option value="Tate Young"></option>
+    <option value="Jenna Skinner"></option>
+    <option value="Jimena Greene"></option>
+    <option value="Kasey Moran"></option>
+    <option value="Bryant Salazar"></option>
+    <option value="Haven Salas"></option>
+    <option value="Tanner Davidson"></option>
+    <option value="Angelina Smith"></option>
+    <option value="Kobe Myers"></option>
+    <option value="Aditya Herring"></option>
+    <option value="Jerome Ray"></option>
+    <option value="Jorden Norris"></option>
+    <option value="Lawson Barnett"></option>
+    <option value="Aryanna Donovan"></option>
+    <option value="Alivia Juarez"></option>
+    <option value="Hassan Conrad"></option>
+    <option value="India Edwards"></option>
+    <option value="Raven Dalton"></option>
+    <option value="Kelly Graham"></option>
+    <option value="Lailah Greer"></option>
+    <option value="Amiya Kemp"></option>
+    <option value="Milton Bowers"></option>
+    <option value="Eva Holden"></option>
+    <option value="Anastasia Wu"></option>
+    <option value="Shirley Mata"></option>
+    <option value="Sterling Phillips"></option>
+    <option value="Sam Mata"></option>
+    <option value="Karter Little"></option>
+    <option value="Jaylin Griffin"></option>
+    <option value="Craig Villegas"></option>
+    <option value="Jared Underwood"></option>
+    <option value="Marilyn Wolfe"></option>
+    <option value="Grant Brock"></option>
+    <option value="Genevieve Flores"></option>
+    <option value="Natalya Cole"></option>
+    <option value="Martha Wall"></option>
+    <option value="Holly Knox"></option>
+    <option value="Teagan Graham"></option>
+    <option value="Kadin Bass"></option>
+    <option value="Jaeden Benton"></option>
+    <option value="Lilia Dickson"></option>
+    <option value="Faith Garrett"></option>
+    <option value="Ahmed Dougherty"></option>
+    <option value="Keith Lucas"></option>
+    <option value="Arabella Lutz"></option>
+    <option value="Rodolfo Carney"></option>
+    <option value="Dennis Oneill"></option>
+    <option value="Uriah Friedman"></option>
+    <option value="Jamiya Terry"></option>
+    <option value="Carl Avila"></option>
+    <option value="Cesar Davidson"></option>
+    <option value="Kendal Morse"></option>
+    <option value="Semaj Hays"></option>
+    <option value="Alexandra Olsen"></option>
+    <option value="Meghan Schroeder"></option>
+    <option value="Carsen Mercer"></option>
+    <option value="Jamar Bullock"></option>
+    <option value="Zackery Wallace"></option>
+    <option value="Gianni Bernard"></option>
+    <option value="Izabelle Summers"></option>
+    <option value="Jamir Baxter"></option>
+    <option value="Amani Oconnell"></option>
+    <option value="Xzavier Beasley"></option>
+    <option value="Maren Vaughn"></option>
+    <option value="Jayvon Phelps"></option>
+    <option value="Mathew Robertson"></option>
+    <option value="Markus Berry"></option>
+    <option value="Reina Davies"></option>
+    <option value="Kadence Brewer"></option>
+    <option value="Jean Solomon"></option>
+    <option value="Isaiah Delacruz"></option>
+    <option value="Ryan Burton"></option>
+    <option value="Ricardo Lowe"></option>
+    <option value="Jimena Henson"></option>
+    <option value="Campbell Keller"></option>
+    <option value="Madilyn Sullivan"></option>
+    <option value="Kaia Pearson"></option>
+    <option value="Alicia Villa"></option>
+    <option value="Mckayla Guerrero"></option>
+    <option value="Marisa Carroll"></option>
+    <option value="Memphis Wade"></option>
+    <option value="Thaddeus Ochoa"></option>
+    <option value="Simeon Melendez"></option>
+    <option value="Jesus Barber"></option>
+    <option value="Haylee Lang"></option>
+    <option value="Tamara Cuevas"></option>
+    <option value="Karly Conrad"></option>
+    <option value="Genevieve Ramirez"></option>
+    <option value="Justin Wall"></option>
+    <option value="Austin Mayer"></option>
+    <option value="Jane Wong"></option>
+    <option value="Roland Booth"></option>
+    <option value="Finley Snow"></option>
+    <option value="Kelton Lutz"></option>
+    <option value="Uriah Reyes"></option>
+    <option value="Bruno Reilly"></option>
+    <option value="Lucian Clay"></option>
+    <option value="Phillip Vance"></option>
+    <option value="Davin Hebert"></option>
+    <option value="Jaylene Harper"></option>
+    <option value="Lara Jensen"></option>
+    <option value="Alessandro Austin"></option>
+    <option value="Izabella Hamilton"></option>
+    <option value="Erica Gaines"></option>
+    <option value="Aydan Ali"></option>
+    <option value="Omar Donovan"></option>
+    <option value="Roy Andersen"></option>
+    <option value="Avah Duarte"></option>
+    <option value="Bailey Hernandez"></option>
+    <option value="Tara Mckee"></option>
+    <option value="Joseph Garcia"></option>
+    <option value="Denzel Velazquez"></option>
+    <option value="Junior Gould"></option>
+    <option value="Alexia Coleman"></option>
+    <option value="Aliya Maxwell"></option>
+    <option value="Brian Madden"></option>
+    <option value="Destiny Colon"></option>
+    <option value="Skyler Garrison"></option>
+    <option value="Lilliana Lewis"></option>
+    <option value="Madison Torres"></option>
+    <option value="Kaylee Watts"></option>
+    <option value="Aden Vance"></option>
+    <option value="Braylen Arroyo"></option>
+    <option value="Jolie Howell"></option>
+    <option value="Chandler Kane"></option>
+    <option value="Cannon Ritter"></option>
+    <option value="Briana Larsen"></option>
+    <option value="Daisy Ibarra"></option>
+    <option value="Tripp May"></option>
+    <option value="Scott Ayers"></option>
+    <option value="Kenyon Marks"></option>
+    <option value="Scott Riddle"></option>
+    <option value="Guillermo Bentley"></option>
+    <option value="Lana Hunter"></option>
+    <option value="Leilani Lara"></option>
+    <option value="Mary Wood"></option>
+    <option value="Chace Robbins"></option>
+    <option value="Gideon Davies"></option>
+    <option value="Slade Hopkins"></option>
+    <option value="Aedan Massey"></option>
+    <option value="Chase Townsend"></option>
+    <option value="Drew Strickland"></option>
+    <option value="Jacqueline Higgins"></option>
+    <option value="Camille Hodges"></option>
+    <option value="Kaliyah Pham"></option>
+    <option value="Lailah Benjamin"></option>
+    <option value="Kailey Forbes"></option>
+    <option value="Kylan Williams"></option>
+    <option value="Liam Dudley"></option>
+    <option value="Davin Hansen"></option>
+    <option value="Savanah Rodriguez"></option>
+    <option value="Jordan Cunningham"></option>
+    <option value="Cornelius Buck"></option>
+    <option value="Jaiden Joseph"></option>
+    <option value="Griffin Flynn"></option>
+    <option value="Aryan Newman"></option>
+    <option value="Danny Zhang"></option>
+    <option value="Quinn Stanley"></option>
+    <option value="Ronnie Potts"></option>
+    <option value="Jabari Snow"></option>
+    <option value="Drake Choi"></option>
+    <option value="Brisa Allen"></option>
+    <option value="Zaria Terry"></option>
+    <option value="Kyan Brandt"></option>
+    <option value="Payton Hill"></option>
+    <option value="Nikhil Cooke"></option>
+    <option value="Camryn Galloway"></option>
+    <option value="Nigel Benitez"></option>
+    <option value="Jayvion Cordova"></option>
+    <option value="Cade Molina"></option>
+    <option value="Luz Waters"></option>
+    <option value="Paisley Rich"></option>
+    <option value="Porter Hudson"></option>
+    <option value="Reilly Jacobson"></option>
+    <option value="Penelope Kaufman"></option>
+    <option value="Tatiana Chang"></option>
+    <option value="Melissa Flowers"></option>
+    <option value="Maximilian Roach"></option>
+    <option value="Lindsey Pacheco"></option>
+    <option value="Miah Mckenzie"></option>
+    <option value="Stacy Osborne"></option>
+    <option value="Julian Little"></option>
+    <option value="Erica Potter"></option>
+    <option value="Gracie Mcdonald"></option>
+    <option value="Cassius Massey"></option>
+    <option value="Sherlyn Franklin"></option>
+    <option value="Ryan Nugent-Hopkins"></option>
+    <option value="Mike Smith"></option>
+    <option value="Kris Russell"></option>
+    <option value="Duncan Keith"></option>
+  </datalist>
+  <!-- Player List for Search -->
+
+  <!-- To do: Do not use CDN but host JSfiles -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+    /* Data for Chart 1 */
+    const ctx1 = document.getElementById('stats_1_chart').getContext('2d');
+    const stats_1_chart = new Chart(ctx1, {
+      type: 'radar',
+      data: {
+        labels: [
+          'Value A',
+          'Value B',
+          'Value C',
+          'Value D',
+          'Value E',
+          'Value F',
+          'Value G'
+        ],
+        datasets: [{
+          label: 'First Dataset',
+          data: [65, 59, 90, 81, 56, 55, 40],
+          fill: true,
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(255, 99, 132)'
+        }, {
+          label: 'Second Dataset',
+          data: [28, 48, 40, 19, 96, 27, 100],
+          fill: true,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(54, 162, 235)',
+          pointBackgroundColor: 'rgb(54, 162, 235)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(54, 162, 235)'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    /* Data for large Chart 1 in modal */
+    const ctx1_2 = document.getElementById('stats_1_chart_2').getContext('2d');
+    const stats_1_chart_2 = new Chart(ctx1_2, {
+      type: 'radar',
+      data: {
+        labels: [
+          'Value A',
+          'Value B',
+          'Value C',
+          'Value D',
+          'Value E',
+          'Value F',
+          'Value G'
+        ],
+        datasets: [{
+          label: 'First Dataset',
+          data: [65, 59, 90, 81, 56, 55, 40],
+          fill: true,
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(255, 99, 132)'
+        }, {
+          label: 'Second Dataset',
+          data: [28, 48, 40, 19, 96, 27, 100],
+          fill: true,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(54, 162, 235)',
+          pointBackgroundColor: 'rgb(54, 162, 235)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(54, 162, 235)'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    /* Data for Chart 2 */
+    const ctx2 = document.getElementById('stats_2_chart').getContext('2d');
+    const stats_2_chart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Value 1', 'Value 2', 'Value 3', 'Value 4', 'Value 5', 'Value 6'],
+        datasets: [{
+          label: '# of Stats',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    /* Data for large Chart 2 in modal */
+    const ctx2_2 = document.getElementById('stats_2_chart_2').getContext('2d');
+    const stats_2_chart_2 = new Chart(ctx2_2, {
+      type: 'bar',
+      data: {
+        labels: ['Value 1', 'Value 2', 'Value 3', 'Value 4', 'Value 5', 'Value 6'],
+        datasets: [{
+          label: '# of Stats',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+
+    /* Data for Chart 3 */
+    const ctx3 = document.getElementById('stats_3_chart').getContext('2d');
+    const stats_3_chart = new Chart(ctx3, {
+      type: 'polarArea',
+      data: {
+        labels: [
+          'Red',
+          'Green',
+          'Yellow',
+          'Grey',
+          'Blue'
+        ],
+        datasets: [{
+          label: 'My First Dataset',
+          data: [11, 16, 7, 3, 14],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)'
+          ]
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    /* Data for large Chart 3 in modal */
+    const ctx3_2 = document.getElementById('stats_3_chart_2').getContext('2d');
+    const stats_3_chart_2 = new Chart(ctx3_2, {
+      type: 'polarArea',
+      data: {
+        labels: [
+          'Red',
+          'Green',
+          'Yellow',
+          'Grey',
+          'Blue'
+        ],
+        datasets: [{
+          label: 'My First Dataset',
+          data: [11, 16, 7, 3, 14],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)'
+          ]
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    /* Data for Chart 4 */
+    const ctx4 = document.getElementById('stats_4_chart').getContext('2d');
+    const stats_4_chart = new Chart(ctx4, {
+      type: 'bubble',
+      data: {
+        datasets: [{
+          label: 'First Dataset',
+          data: [{
+            x: 20,
+            y: 25,
+            r: 20
+          }, {
+            x: 35,
+            y: 15,
+            r: 20
+          },
+          {
+            x: 30,
+            y: 20,
+            r: 14
+          },
+          {
+            x: 24,
+            y: 15,
+            r: 25
+          }
+          ],
+          backgroundColor: 'rgb(240, 99, 132)'
+        },
+        {
+          label: 'Second Dataset',
+          data: [{
+            x: 18,
+            y: 23,
+            r: 18
+          }, {
+            x: 28,
+            y: 24,
+            r: 18
+          },
+          {
+            x: 32,
+            y: 17,
+            r: 40
+          },
+          {
+            x: 22,
+            y: 13,
+            r: 14
+          }],
+          backgroundColor: 'rgb( 99, 240, 132)'
+        }]
+      }
+    });
+
+    /* Data for large Chart 4 in modal */
+    const ctx4_2 = document.getElementById('stats_4_chart_2').getContext('2d');
+    const stats_4_chart_2 = new Chart(ctx4_2, {
+      type: 'bubble',
+      data: {
+        datasets: [{
+          label: 'First Dataset',
+          data: [{
+            x: 20,
+            y: 25,
+            r: 20
+          }, {
+            x: 35,
+            y: 15,
+            r: 20
+          },
+          {
+            x: 30,
+            y: 20,
+            r: 14
+          },
+          {
+            x: 24,
+            y: 15,
+            r: 25
+          }
+          ],
+          backgroundColor: 'rgb(240, 99, 132)'
+        },
+        {
+          label: 'Second Dataset',
+          data: [{
+            x: 18,
+            y: 23,
+            r: 18
+          }, {
+            x: 28,
+            y: 24,
+            r: 18
+          },
+          {
+            x: 32,
+            y: 17,
+            r: 40
+          },
+          {
+            x: 22,
+            y: 13,
+            r: 14
+          }],
+          backgroundColor: 'rgb( 99, 240, 132)'
+        }]
+      }
+    });
+
+    /* JQuery to swap out images */
+    $('a').on('click', function () {
+      var target = $(this).attr('rel');
+      $("#" + target).show().siblings("div").hide();
+    });
+
+    /* JQuery to mark link as active */
+    $('.video-links a').click(function (e) {
+      //console.log(e.currentTarget,"//",e.target,"//",this);
+      e.stopPropagation();
+      $('.video-links a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    /* JQuery to mark link as active */
+    $('.player-list-stats1 a').click(function (e) {
+      //console.log(e.currentTarget,"//",e.target,"//",this);
+      e.stopPropagation();
+      $('.player-list-stats1 a').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    /* JQuery filter for player list in stats 1 */
+    $(document).ready(function () {
+      $("#filter-field-stats1").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#player-list-stats1 a").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+
+    /* JQuery clear filter for player list in stats 1 */
+    $('#clear-filter-stats1').click(function () {
+      $('#filter-field-stats1').val('').keyup();
+    });
+
+
+  </script>
+</body>
+
+</html>
